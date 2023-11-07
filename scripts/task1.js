@@ -2,15 +2,17 @@ function longestString(string){
     const arr = string.split(' ')
     let arr2 = []
     arr.forEach((element) => {
-        arr2.push(element.length())
+        arr2.push(element.length)
     })
     let max = arr2[0]
+    let maxind = 0;
     for (let i = 0; i < arr2.length; i++) {
         if (max < arr2[i]){
             max = arr2[i]
+            maxind = i
         }
     }
-    console.log(max)
+    console.log(arr[maxind])
 }
 
 function slsb(arr){
@@ -23,7 +25,7 @@ function slsb(arr){
             }
         }
     }
-    console.log(`${arr[2]}, ${arr[arr.length-2]}`)
+    console.log(`${arr[1]}, ${arr[arr.length-2]}`)
 }
 
 function mySumm(arr){
